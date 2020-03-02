@@ -8,12 +8,17 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { OrderComponent } from './order/order.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { CakeComponent } from './cake/cake.component';
+import { CupcakesComponent } from './cupcakes/cupcakes.component';
 
 
 @NgModule({
@@ -23,7 +28,9 @@ import { CheckoutComponent } from './checkout/checkout.component';
     HomeComponent,
     ReviewsComponent,
     OrderComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    CakeComponent,
+    CupcakesComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +39,10 @@ import { CheckoutComponent } from './checkout/checkout.component';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTabsModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
