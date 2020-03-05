@@ -1,1 +1,85 @@
 <p>cake works!</p>
+
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Tamano
+      </mat-panel-title>
+      <mat-panel-description>
+        Elije tu pastel
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <mat-label>para cuantas personas?</mat-label>
+      <mat-select [(value)]="shapes">
+        <mat-option *ngFor="let cakeSize of cakeSizes" value="shapes">
+          {{cakeSize.number}}
+
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <p>{{shapes}}</p>
+
+
+
+  </mat-expansion-panel>
+
+
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Sabores
+      </mat-panel-title>
+      <mat-panel-description>
+        Sabor de pan, relleno, y betun
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>I'm visible because I am open</p>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Decoraciones
+      </mat-panel-title>
+      <mat-panel-description>
+        Personaliza tu pastel
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <mat-label>First name</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Age</mat-label>
+      <input matInput type="number" min="1">
+    </mat-form-field>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Compra
+      </mat-panel-title>
+      <mat-panel-description>
+        Revisa tu compra
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <mat-label>First name</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Age</mat-label>
+      <input matInput type="number" min="1">
+    </mat-form-field>
+  </mat-expansion-panel>
+</mat-accordion>

@@ -1,23 +1,26 @@
 <p>Banner bonito: Karauet Reposteria Gourmet</p>
 <hr>
+<mat-grid-list cols="4" rowHeight="100%">
+  <div *ngFor="let pastOrder of pastOrders">
+    <mat-grid-tile>
+      <mat-card class="example-card">
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            Ocasion: {{pastOrder.occacion}} <br>
+            Porciones: {{pastOrder.servings}} <br>
+            {{pastOrder.cake}}<br>
+            Forma: {{pastOrder.shape}}<br>
+            Sabor: {{pastOrder.flavor}}<br>
+            Sabor del relleno: {{pastOrder.filling}}<br>
+            Betun: {{pastOrder.frostingFlavor}}<br>
+            Color: {{pastOrder.frostingColor}}<br>
+            Decoraciones: {{pastOrder.decorations}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>
 
-<div *ngFor="let pastOrder of pastOrders">
-
-  <mat-card class="example-card">
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        Ocasion: {{pastOrder.occacion}} <br>
-        Porciones: {{pastOrder.servings}} <br>
-        {{pastOrder.cake}}<br>
-        Forma: {{pastOrder.shape}}<br>
-        Sabor: {{pastOrder.flavor}}<br>
-        Sabor del relleno: {{pastOrder.filling}}<br>
-        Betun: {{pastOrder.frostingFlavor}}<br>
-        Color: {{pastOrder.frostingColor}}<br>
-        Decoraciones: {{pastOrder.decorations}}
-      </p>
-    </mat-card-content>
-  </mat-card>
-
-</div>
+<hr>
