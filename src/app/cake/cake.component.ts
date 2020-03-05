@@ -8,10 +8,15 @@ import { cakeSizes } from '../cakeSizes';
 })
 export class CakeComponent implements OnInit {
   cakeSizes = cakeSizes;
+  shapes: string[];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showSelected() {
+    console.log(this.shapes)
   }
 
 }

@@ -13,8 +13,8 @@
 
     <mat-form-field>
       <mat-label>para cuantas personas?</mat-label>
-      <mat-select [(value)]="shapes">
-        <mat-option *ngFor="let cakeSize of cakeSizes" value="shapes">
+      <mat-select [(ngModel)]="shapes" (selectionChange)="showSelected()">
+        <mat-option *ngFor="let cakeSize of cakeSizes" [value]="cakeSize.shapes">
           {{cakeSize.number}}
 
         </mat-option>
